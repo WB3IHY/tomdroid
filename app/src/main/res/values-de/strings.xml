@@ -348,30 +348,6 @@
 	<string name="noFiles">Keine Dateien oder Verzeichnisse</string>
 	<string name="chooseFile">Wählen Sie eine Datei, die entweder eine Tomboy Notizdatei ist (welche importiert wird) oder eine Klartext-Datei (was eine neue Notiz erzeugt):</string>
 
-	<!-- Title of first Note -->
-	<string name="firstNoteTitle">Tomdroids erste Notiz</string>
-	
-	<string-array name="firstNoteContent">
-		<item>Willkommen bei Tomdroid!\n</item>
-		<item>Sie haben hier keine Notizen. Am Anfang bitte die Synchronisationsoptionen unter Einstellungen anpassen. Es gibt zwei unten beschriebene Synchronisationsoptionen.\n</item>
-		<item>=Online-Synchronisierung=</item>
-		<!-- =text= makes <size:large>text</size:large> -->
-		<item>Online-Synchronisation ist das, wo nach Sie suchen, wenn Sie mit Tomboy-Online, Ihrem eigenen Rainy/Snowy Server oder irgend einem andrem Server, der die Tomboy Web REST API unterstützt, verbinden wollen .\n</item>
-		<item>Um dies zu verwenden, stellen Sie den Synchronisations-Service in den Einstellungen auf Online-Synchronisation und geben Sie eine Server-URL an. Hier sind einige öffentliche:</item>
-		<!-- -text is for list-items. --> 
-		<item>-Tomboy Online - https://edge.tomboy-online.org/</item>
-		<!-- -text is for list-items. --> 
-		<item>-rainy.notesync.org - https://notesync.org:8080/[username]/[password]/\n</item>
-		<item>Einmal eingestellt, drücken Sie auf das Synchronisations-Logo an der Oberseite von Tomboy, um Ihre Notizen zu synchronisieren.\n</item>
-		<item>Anmerkung: Eine Sicherung der Tomboy Notizen wird empfohlen, da diese App sich noch in der Entwicklung befindet und Notizen beschädigt werden können.\n</item>
-		<item>Bitte besuche http://live.gnome.org/Tomboy/Directories um den Ort der *.note Dateien auf allen Plattformen herauszufinden .\n</item>
-		<!-- =text= makes <size:large>text</size:large> --> 
-		<item>=SD-Karte=</item>
-		<item>Legen Sie Ihre Tomboy Notizen (*.note) auf Ihre SD-Karte unter tomdroid/. Wenn die Notizen einmal kopiert wurden, stellen sie nun den Synchronisation-Service auf Ihre SD Card unter Einstellungen ein, dann betätigen Sie das Synchronisation-Logo in Tomdroid\'s oberer Leiste .\n</item>
-		<item>Auch Tomdroid braucht immer neue Entwickler. Wenn Sie Interesse haben, treten Sie dem Tomdroid-Entwickler-Team im Launchpad bei: http://launchpad.net/~tomdroid-dev.\n</item>
-		<item>Zuletzt: Wenn Sie eine Fehler finden, berichten Sie diesen bitte auf: https://bugs.launchpad.net/tomdroid</item>
-	</string-array>
-	
 	<!-- 
 	Information that goes into the Android Market Application Listing. 
 	I\'ve put it in here so that it\'ll get translated by translators.

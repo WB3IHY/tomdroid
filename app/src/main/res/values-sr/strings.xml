@@ -348,30 +348,6 @@
 	<string name="noFiles">Нема датотека или фасцикли</string>
 	<string name="chooseFile">Изаберите датотеку испод која је или Томичина белешка (која ће бити увезена), или обична текстуална датотека (од које ће се направити нова белешка)</string>
 
-	<!-- Title of first Note -->
-	<string name="firstNoteTitle">Томадроидова прва белешка</string>
-	
-	<string-array name="firstNoteContent">
-		<item>Добродошли код Томадроида!\n</item>
-		<item>Овде још увек немате белешке. Да би почели, подесите својства усклађивања у поставкама. Постоје две могућности усклађивања описане испод.\n</item>
-		<item>=Усклађивање преко мреже=</item>
-		<!-- =text= makes <size:large>text</size:large> -->
-		<item>Треба Вам услађивање преко мреже ако желите да ускладите белешке са Томицом на мрежи, својим Rainy/Snowy служитељем или било којим сервером који подржава Tomboy Web REST API.\n</item>
-		<item>Да би га користили, поставите услугу усклађивања на усклађивање преко мреже у поставкама, а онда подесите адресу служитеља. Ево неких јавних:</item>
-		<!-- -text is for list-items. --> 
-		<item>-Томица на мрежи  - https://edge.tomboy-online.org/</item>
-		<!-- -text is for list-items. --> 
-		<item>-rainy.notesync.org - https://notesync.org:8080/[username]/[password]/\n</item>
-		<item>Када се подеси, притисните знак усклађивања на Томадроидовој горњој траци за усаглашавање бележака.\n</item>
-		<item>Примедба: Можда желите да направите резервни умножак пре усклађивања, пошто је ова апликација још увек у развоју, и могла би искварити Ваше Томичине белешке.\n</item>
-		<item>Молим, погледајте  http://live.gnome.org/Tomboy/Directories да би знали путању *.note датотека на свим платформама.\n</item>
-		<!-- =text= makes <size:large>text</size:large> --> 
-		<item>=СД картица=</item>
-		<item>Поставите белешке (*.note) на СД картицу у tomdroid/.  Када се белешке умноже, поставите услугу усклађивања на СД картицу у поставкама, затим притисните знак усклађивања на горњој траци Томадроида.\n</item>
-		<item>Такође, Томадроид стално тражи нове доприносиоце. Ако вас занима придружите се Томадроидовој развојној дружини на Лансирној рампи: http://launchpad.net/~tomdroid-dev.\n</item>
-		<item>Најзад, ако наиђете на потешкоће, молим, пријавите их на: https://bugs.launchpad.net/tomdroid</item>
-	</string-array>
-	
 	<!-- 
 	Information that goes into the Android Market Application Listing. 
 	I\'ve put it in here so that it\'ll get translated by translators.

@@ -348,30 +348,6 @@
 	<string name="noFiles">Dosya ya da dizin yok</string>
 	<string name="chooseFile">Aşağıdaki dosyalardan birisini seçin. Bunlar Tomboy not dosyası( dışarıdan alınabilir) ya da sadece metin içeren dosyalar( Yeni Not ile yaratabilirsiniz) olabilir.</string>
 
-	<!-- Title of first Note -->
-	<string name="firstNoteTitle">Tomdroid\'de ki ilk not</string>
-	
-	<string-array name="firstNoteContent">
-		<item>Tomdroid\'e Hoşgeldiniz!\n</item>
-		<item>Burada henüz bir notunuz yok. Başlamak için, ayarların içinde bulunan eşitleme ayarlarından size uygun olanı seçin. 2 adet senkronizasyon seçeneği mevcuttur.\n</item>
-		<item>= Çevrimiçi Eşitleme=</item>
-		<!-- =text= makes <size:large>text</size:large> -->
-		<item>Eğer Tomboy-Çevrimiçi\'ye, kendi Rainy/Snowy sunucunuza veya Tomboy Web REST API\'ı destekleyen herhangi bir sunucuya eşitleme yapmak istiyorsanız Çevrimiçi Eşzamanlama, tam olarak aradığınız şeydir.\n</item>
-		<item>Çevrimiçi Eşitleme seçeneğinden Eşitleme Hizmetini kullanın, ardından da Sunucu URL\'nizi girin. Herkesin kullanabildiği birkaç sunucu:</item>
-		<!-- -text is for list-items. --> 
-		<item>-Tomboy Online - https://edge.tomboy-online.org/</item>
-		<!-- -text is for list-items. --> 
-		<item>-rainy.notesync.org - https://notesync.org:8080/[kullanıcıadı]/[parola]/\n</item>
-		<item>Başlamadan önce, Tomdroid üst çubuğunda bulunan Eşitleme simgesine tıklayarak notlarınızı eşitleyebilirsiniz.\n</item>
-		<item>Not: Bu uygulama hala geliştirme aşamasında olduğundan ve Tomboy notlarınız zarar görebileceğinden, eşitlemeden önce Tomboy notlarınızı yedeklemek isteyebilirsiniz.</item>
-		<item>Tüm platformlardaki *.note dosyalarının konumunu içi http://live.gnome.org/Tomboy/Directories sayfasına bakın.\n</item>
-		<!-- =text= makes <size:large>text</size:large> --> 
-		<item>= SD Card=</item>
-		<item>Tomboy notlarınızı (*.note), SD Kartınızın tomdroid/ dizini altına koyun. Notlar kopyalandıktan sonra, Tercihler içerisinden Eşitleme Hizmetini SD Kart olarak ayarlayın ve Tomdroid\'in üst çubuğundaki Eşitleme logosuna dokunun.\n</item>
-		<item>Ayrıca, Tomdroid her zaman yeni katkıcılara ihtiyaç duyar. Eğer tomdroid-dev takımına ilgi duyuyorsanız, Launchpad\'de bize katılın: http://launchpad.net/~tomdroid-dev.\n</item>
-		<item>Son olarak, herhangi bir sorunla karşılaştığınızda , lütfen https://bugs.launchpad.net/tomdroid bu siteye rapor edin ki biz de geliştirmeye yardımcı olalım.</item>
-	</string-array>
-	
 	<!-- 
 	Information that goes into the Android Market Application Listing. 
 	I\'ve put it in here so that it\'ll get translated by translators.

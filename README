@@ -1,72 +1,98 @@
-Tomdroid v.0.7.5
+Tomdroid (WB3IHY personal fork)
 Tomboy on Android
 Copyright 2008, 2009, 2010, 2011, 2012 Olivier Bilodeau <olivier@bottomlesspit.org>
 Copyright 2012, 2013, 2014 Stefan Hammer <j.4@gmx.at>
 
-http://www.launchpad.net/tomdroid/
+https://github.com/WB3IHY/tomdroid
+
+This is a personal fork of the original Tomdroid project (originally hosted
+at launchpad.net/tomdroid), modernized to build and run on current Android
+versions. It's maintained for personal sideload use and is not published on
+any app store.
+
+What's different from upstream Tomdroid
+========================================
+- Rebuilt on a current Gradle/AGP toolchain (Gradle 8.7, AGP 8.5.2,
+  compileSdk 34) instead of the original Eclipse ADT / Gradle 1.6 setup.
+- Notebooks support, matching Tomboy desktop's system:notebook:<name> tag
+  convention.
+- The old floating system Search Dialog (unusable on modern Android) was
+  replaced with a proper in-app SearchView.
+- Security hardening: real TLS certificate/hostname verification for HTTPS
+  sync (previously disabled), no more logging of OAuth tokens or note
+  content, parameterized SQL in the note content provider, safe note
+  filename handling for SD Card sync, and backups disabled
+  (android:allowBackup="false").
+- Follows the system day/night theme instead of being hardcoded to light
+  mode.
+- Various crash fixes found through on-device testing (cursor lifecycle
+  bugs, missing legacy HTTP library declaration, connection/cursor leaks
+  on sync, etc).
 
 Requirements
 ============
-- Android 1.6 or later required
+- Android 7.0 (API 24) or later to run.
+- To build from source: JDK 17 and the Android SDK (compileSdk 34).
 
 How to Install
 ==============
-Stable Tomdroid releases are available from the Android Marketplace. 
+Signed release APKs are published under GitHub Releases:
+https://github.com/WB3IHY/tomdroid/releases
 
-If you don't have access to the Android Marketplace or are willing to try
-slightly less proven Tomdroid releases you can try install from launchpad.net 
-using one of these two options:
-- Directly from the phone using the browser
-- Using the Android SDK with the phone connected through USB
+Note: this APK is signed with a personal key, not the original Tomdroid's.
+If you already have the official Tomdroid installed (e.g. from Play Store
+or F-Droid), uninstall it first — Android will refuse to install this one
+over it due to the signature mismatch.
 
-- Directly from the phone using the browser
-  On your phone:
-  1- Go under Settings -> Application Settings and enable "Unknown sources"
-  2- Go to http://launchpad.net/tomdroid with your browser
-  3- Select "downloads" and click to download the tomdroid-<version>.apk
-  
-- Using the Android SDK with the phone connected through USB
-  1- Download the Android SDK
-     http://developer.android.com/sdk/
-   
-  2- Install the Android SDK
-     http://developer.android.com/sdk/installing.html
-     Make sure you follow the instructions on setting up your PATH.
+1- Download tomdroid-wb3ihy-<version>.apk to your device, or pull it with adb:
+   # adb push tomdroid-wb3ihy-<version>.apk /sdcard/Download/
 
-  3- Perform Step 3 of the "Setting up a Device for Development" instructions:
-     http://developer.android.com/guide/developing/device.html#setting-up
+2- On the device, allow "Install unknown apps" for the app you're
+   installing from (browser or file manager), then open the APK to install.
 
-  4- Plug in your device, verify if its detected by running:
-     # adb devices
+   Or install directly over USB with the device connected:
+   # adb -d install tomdroid-wb3ihy-<version>.apk
 
-  5- If the device is detected then install tomdroid:
-     # adb -d install tomdroid-<version>.apk
+   To reinstall/upgrade:
+   # adb -d install -r tomdroid-wb3ihy-<version>.apk
 
-     To reinstall/upgrade:
-     # adb -d install -r tomdroid-<version>.apk
+How to Build from Source
+=========================
+1- Clone the repository:
+   # git clone https://github.com/WB3IHY/tomdroid.git
+
+2- Make sure JAVA_HOME points at a JDK 17 install, then build a debug APK:
+   # ./gradlew assembleDebug
+   The APK will be under app/build/outputs/apk/debug/.
+
+3- For a signed release build, set these environment variables to point at
+   your own keystore (nothing keystore-related is stored in the repo) and
+   run assembleRelease:
+   # export RELEASE_STORE_FILE=/path/to/your.jks
+   # export RELEASE_STORE_PASSWORD=...
+   # export RELEASE_KEY_ALIAS=...
+   # export RELEASE_KEY_PASSWORD=...
+   # ./gradlew assembleRelease
+   The signed APK will be under app/build/outputs/apk/release/.
 
 Usage
 =====
-NEW: Read "Tomdroid's first note" note, it will provide instructions on getting started.
+On first launch, read "Tomdroid's First Note" for instructions on setting
+up synchronization. Two sync options are supported:
 
-For SD Card sync, here are old instructions on how to copy your notes to the SD Card.
-You can either:
-* Plug in your sdcard and copy the notes to it:
-  # mkdir /media/sdcard/tomdroid/; cp ~/.local/share/tomboy/*.note /media/sdcard/tomdroid/
+- Online Synchronization: syncs against any server implementing the Tomboy
+  Web REST API (e.g. a self-hosted grauphel instance). Set Service to
+  Online Synchronization in preferences and provide the Server URL.
 
-* Use adb to push the notes while your phone is plugged in by USB:
-  1- Make sure /sdcard/tomdroid/ exists
-     # adb shell
-     > mkdir /sdcard/tomdroid
-     > exit
-  2- Pushing the individual note files:
-     # adb push <note file> /sdcard/tomdroid/
-  3- Repeat step 2 as needed.
+- SD Card: copy your Tomboy *.note files onto the device under
+  tomdroid/, then set Service to SD Card in preferences.
+  # adb shell mkdir /sdcard/tomdroid
+  # adb push <note file> /sdcard/tomdroid/
+
+Either way, hit the Sync icon on Tomdroid's top bar to synchronize.
 
 Uninstall
 =========
-On your phone under Settings -> Applications -> Manage applications
-Or if you have the SDK installed
-1- Plug in your device
-2- Run:
+On your phone under Settings -> Apps -> Tomdroid -> Uninstall.
+Or, with the device connected and the SDK installed:
    # adb -d uninstall org.tomdroid

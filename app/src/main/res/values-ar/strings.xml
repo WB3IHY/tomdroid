@@ -348,30 +348,6 @@
 	<string name="noFiles">No files or directories</string>
 	<string name="chooseFile">إختر ملفاً والذى يجب ان يكون ملف مُلاحظه توم بوى (فى هذه الحاله سَتُدَرَج) او ملف نصى مُجَرَد (فى هذه الحاله سيُنشَئ مُلاحظه جديده):</string>
 
-	<!-- Title of first Note -->
-	<string name="firstNoteTitle">اولى مُلاحظات توم درويد</string>
-	
-	<string-array name="firstNoteContent">
-		<item>مرحباً بك فى برنامج توم درويد!\n</item>
-		<item>You have no notes here yet. To get started, set your Synchronization preferences under Settings. There are two synchronization options described below.\n</item>
-		<item>=المزامنه عبر الشبكه العنكبوتيه=</item>
-		<!-- =text= makes <size:large>text</size:large> -->
-		<item>Online Synchronization is what you are looking for if you want to sync to Tomboy-Online, your own Rainy/Snowy server or any server supporting the Tomboy Web REST API.\n</item>
-		<item>ﻹستخدامها عليك ضبط نوع خدمه المزامنه على المزامنه عبر الشبكه العنكبوتيه فى اﻹعدادات ثم تزويد البرنامج بمسار مورد منمط "رابط" لخادم. اليك بعض العموميه منهم:</item>
-		<!-- -text is for list-items. --> 
-		<item>-Tomboy Online - https://edge.tomboy-online.org/</item>
-		<!-- -text is for list-items. --> 
-		<item>-rainy.notesync.org - https://notesync.org:8080/[username]/[password]/\n</item>
-		<item>بعد الضبط ، انقر على شعار علامه التزامن الموجود فى شريط توم درويد العلوى لبدأ مزامنه مُلاحظاتك.\n</item>
-		<item>يوَصَى بشده بعمل نسخ إحتياطى لجميع مُلاحظاتك قبل بدأ عمليه المزامنه ، حيث ان توم درويد حالياً مازال فى مرحله تطويريه وقد يُفِسِد المُلاحظات.\n</item>
-		<item>Please see http://live.gnome.org/Tomboy/Directories for the location of the *.note files on all platforms.\n</item>
-		<!-- =text= makes <size:large>text</size:large> --> 
-		<item>=SD Card=</item>
-		<item>Put your Tomboy notes (*.note) on your SD Card under tomdroid/. Once the notes are copied, set Sync Service to SD Card in preferences then hit the Sync logo on Tomdroid\'s top bar.\n</item>
-		<item>وايضاً ، توم درويد يبحث عن المزيد من المساهمات. إذا كنت ترغب فى المساعده فيُرجى اﻹنضمام لفريق تطوير توم درويد على منصه اﻹطلاق من خلال : http://launchpad.net/~tomdroid-dev.\n</item>
-		<item>واخيراً ، إذا واجهت اى علل فبرجاء إبلاغ الفريق من خلال : https://bugs.launchpad.net/tomdroid</item>
-	</string-array>
-	
 	<!-- 
 	Information that goes into the Android Market Application Listing. 
 	I\'ve put it in here so that it\'ll get translated by translators.

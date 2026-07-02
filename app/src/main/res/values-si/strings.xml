@@ -348,30 +348,6 @@
 	<string name="noFiles">ගොනු හෝ නාමාවලියන් අඩංගු නොවේ</string>
 	<string name="chooseFile">පහත ගොනුවක් හෝ දඟකාර කෙල්ල සටහන් ගොනුවක් (ආනයනය කළ) හෝ සාමාන්‍ය වගන්ති ගොනුවක් (නිර්මාණය කළ නව සටහනක්) තෝරා ගන්න:</string>
 
-	<!-- Title of first Note -->
-	<string name="firstNoteTitle">ටොම්ඩ්රොයිඩ්ගේ පළමු සටහන</string>
-	
-	<string-array name="firstNoteContent">
-		<item>ටොම්ඩ්රොයිඩ් වෙතට පිළිගනු ලබනවා!\n</item>
-		<item>ඔබට මෙහි තවමත් සටහන් නොමැත. ආරම්භ කිරීමට, ඔබේ සමමුහුර්තකරණය කළ වරණයන් කට්ටල අංග යටතේ සකස් කරන්න. මෙහි සමකාලීන විකල්පයන් දෙකක් පහත විස්තර කර ඇත.\n</item>
-		<item>=මාර්ගගත සමමුහුර්තකරණය=</item>
-		<!-- =text= makes <size:large>text</size:large> -->
-		<item>මාර්ගගත සමමුහුර්තකරණය යනු ඔබ බලන්නේ මොනවාද ඔබට දඟකාර කෙල්ල මාර්ගගත වීමට  අවශ්‍ය නම් - ටොම්බෝයි වෙබ් REST API වලින් උදව්කරන ඔබේම වැසි සහිත/හිම සහිත සර්වර් හෝ ඕනෑම සර්වර් එකක්.\n</item>
-		<item>එය භාවිතයට, වරණයන්වලින් මාරගගත සමමුහුර්තකරණයට සමමුහුර්ත සේවය සකස් කොට Server URL එක සපයන්න. මෙහි සමහරක් පොදු එකකි:</item>
-		<!-- -text is for list-items. --> 
-		<item>-දඟකාර කෙල්ල මාර්ගගත - https://edge.tomboy-online.org/</item>
-		<!-- -text is for list-items. --> 
-		<item>-rainy.notesync.org - https://notesync.org:8080/[භාවිත නම ]/[රහස්‍ය අංකය ]/\n</item>
-		<item>එකවරක් සකස්කරන්න, ටොම්ඩ්රොයිඩ්ගේ ඉහළ හරසෙ සමමුහුර්තකරණ ඔබේ සටහන් සමමුහුර්ත ලාංඡනය ට ගැටෙන්නට දෙන්න</item>
-		<item>සටහන: ඔබට ඔබේ දගකාර කෙල්ල සටහන් සමමුහුර්තකරණයට පෙර අවශ්‍ය විය හැකිය,මෙතැන් සිට අයදුම සංවර්ධනය කිරීම යටතේ ඔබේ දඟකාර කෙල්ල සටහන් දුෂ්ප්‍රතිපන්න විය හැකිය.\n</item>
-		<item>කරුණාකර  *.note ගොනුවල සෑම වේදිකාවක්ම පිහිටි ස්ථානය සඳහා http://live.gnome.org/Tomboy/Directories  බලන්න</item>
-		<!-- =text= makes <size:large>text</size:large> --> 
-		<item>=SD කාර්ඩ්පත=</item>
-		<item>ටොම්ඩ්රොයිඩ් යටතේ ඔබේ දඟකාර කෙල්ල සටහන් ඔබේ SD කාර්ඩ්පතට දමන්න/. එකවර සටහන් පිටපත් කර, සම්මුහුර්තකරණ සේවාව වරණයන් වලින්  SD කාර්ඩ්පතට සකස්කර, සමමුහුර්තකරණ ලාංඡනය ටොම්ඩ්රොයිඩ්ගේ ඉහළ හරස සමඟ ගැටෙන්නට සලස්වන්න.</item>
-		<item>තවද, ටොම්ඩ්රොයිඩ් නිතරම අලුත් අධාරකරුවන් බලාගෙන සිටියි. ඔබ එය ගැන සැලකිලිමත් නම් Launchpad හි ටොම්ඩ්රොයිඩ්-dev සමඟ සම්බන්ධ වන්න: http://launchpad.net/~tomdroid-dev.\n</item>
-		<item>අවසානයේ, ඔබට ඕනෑම ප්‍රශ්නයක් මුණගැසේ නම්, කරුණාකර එය https://bugs.launchpad.net/tomdroid දී වාර්තා කරන්න.</item>
-	</string-array>
-	
 	<!-- 
 	Information that goes into the Android Market Application Listing. 
 	I\'ve put it in here so that it\'ll get translated by translators.

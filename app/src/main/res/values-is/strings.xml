@@ -348,30 +348,6 @@
 	<string name="noFiles">Engar skrár eða möppur.</string>
 	<string name="chooseFile">Veldu skrá fyrir neðan sem er annaðhvort Tomboy glósa (sem mun verða innflutt) eða bertextaskjal (sem mun gera nýja glósu):</string>
 
-	<!-- Title of first Note -->
-	<string name="firstNoteTitle">Fyrsta glósa Tomdroid</string>
-	
-	<string-array name="firstNoteContent">
-		<item>Velkomin í Tomdroid!\n</item>
-		<item>Þú hefur engar glósur hér enn. Til að byrja, stilltu samstillingar í stillingum. Það eru tveir samstillingarmöguleikar útskýrðir fyrir neðan.\n</item>
-		<item>=Samstilling yfir net=</item>
-		<!-- =text= makes <size:large>text</size:large> -->
-		<item>Samstilling yfir net er það sem þú ert að leita eftir til að samstilla við Tomboy-Online, þinn eigin Rainy/Snowy þjón eða hvaða þjón sem styður Tomboy Web REST API.\n</item>
-		<item>Til að nota það, stilltu samstillingaþjónustu á samstillingu yfir net í stillingum og veittu síðan slóð á þjón. Hér eru nokkrir opinberir:</item>
-		<!-- -text is for list-items. --> 
-		<item>-Tomboy Online - https://edge.tomboy-online.org/</item>
-		<!-- -text is for list-items. --> 
-		<item>-rainy.notesync.org - https://notesync.org:8080/[username]/[password]/\n</item>
-		<item>Þegar stillt er, smelltu á samstillingatáknið í efstu stiku Tomdroid til að samstilla glósur þínar.\n</item>
-		<item>Athugaðu: þú vilt kannski taka afrit af Tomboy glósum þínum fyrir samstillingu, þar sem þetta forrit er ennþá í þróun og gæti skemmt Tomboy glósur þínar.\n</item>
-		<item>Vinsamlegast athugaðu http://live.gnome.org/Tomboy/Directories til að sjá staðsetningu *.note skráa á öllum kerfum.\n</item>
-		<!-- =text= makes <size:large>text</size:large> --> 
-		<item>=SD kort=</item>
-		<item>Settu Tomboy glósur (*.note) á SD kortið þitt undir tomdroid/. Þegar glósurnar hafa verið afritaðar, stilltu samstillingaþjónustu á SD kort í stillingum og smelltu síðan á samstillingatáknið í efstu stiku Tomdroid.</item>
-		<item>Einnig, þá er Tomdroid alltaf að leita að nýjum framleggjendum. Ef þú hefur áhuga gakktu í tomdroid-dev liðið á Launchpad: http://launchpad.net/~tomdroid-dev.\n</item>
-		<item>Í síðasta lagi, ef þú lendir í einhverju vandamáli, vinsamlegast tilkynntu það á: https://bugs.launchpad.net/tomdroid</item>
-	</string-array>
-	
 	<!-- 
 	Information that goes into the Android Market Application Listing. 
 	I\'ve put it in here so that it\'ll get translated by translators.

@@ -348,30 +348,6 @@
 	<string name="noFiles">Не знайдений файл або папка</string>
 	<string name="chooseFile">Виберіть файл нижче, який буде імпортований (як Tomboy-замітка) або текстовий файл (з якого буде створена нова замітка):</string>
 
-	<!-- Title of first Note -->
-	<string name="firstNoteTitle">Перша замітка Tomdroid</string>
-	
-	<string-array name="firstNoteContent">
-		<item>Ласкаво просимо в Tomdroid!\n</item>
-		<item>У Вас поки немає заміток. Щоб приступити до роботи, задайте настройки синхронізації в меню Установки. Є дві опції синхронізації, описані нижче.\n</item>
-		<item>=Онлайн синхронізація=</item>
-		<!-- =text= makes <size:large>text</size:large> -->
-		<item>Online Synchronization is what you are looking for if you want to sync to Tomboy-Online, your own Rainy/Snowy server or any server supporting the Tomboy Web REST API.\n</item>
-		<item>Щоб використовувати його, виберіть Сервіс Синхронізації в пункті Онлайн Синхронізація в настройках, вказавши URL-адресу сервера. Ось деякі з них:</item>
-		<!-- -text is for list-items. --> 
-		<item>-Tomboy сайт - https://edge.tomboy-online.org/</item>
-		<!-- -text is for list-items. --> 
-		<item>-rainy.notesync.org - https://notesync.org:8080/[ім\'я користувача]/[пароль]/\n</item>
-		<item>Після установки, натисніть кнопку Синхронізація на верхній панелі Tomdroid для синхронізації нотаток.\n</item>
-		<item>Примітка: Ви можете створити резервну копію замітки Tomboy перед синхронізацією. Так як це додаток знаходиться в стадії розробки, то можливе пошкодження Ваших нотаток.\n</item>
-		<item>Будь ласка, ознайомтеся з http://live.gnome.org/Tomboy/Directories перед розміщенням *. Зверніть увагу, файли на всіх платформах.\n</item>
-		<!-- =text= makes <size:large>text</size:large> --> 
-		<item>=SD-Карта=</item>
-		<item>Put your Tomboy notes (*.note) on your SD Card under tomdroid/. Once the notes are copied, set Sync Service to SD Card in preferences then hit the Sync logo on Tomdroid\'s top bar.\n</item>
-		<item>Крім того, Tomdroid завжди шукає нових учасників. Приєднуйтесь до tomdroid-dev команді на Launchpad: http://launchpad.net/~tomdroid-dev.\n</item>
-		<item>Нарешті, якщо у Вас виникнуть проблеми, будь ласка, повідомте про це за адресою: https://bugs.launchpad.net/tomdroid</item>
-	</string-array>
-	
 	<!-- 
 	Information that goes into the Android Market Application Listing. 
 	I\'ve put it in here so that it\'ll get translated by translators.

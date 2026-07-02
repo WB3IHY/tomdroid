@@ -348,30 +348,6 @@
 	<string name="noFiles">ファイルやディレクトリーがありません</string>
 	<string name="chooseFile">Choose a file below that is either a Tomboy note file (which will be imported) or a plain text file (which will create a new note):</string>
 
-	<!-- Title of first Note -->
-	<string name="firstNoteTitle">Tomdroidの最初のメモ</string>
-	
-	<string-array name="firstNoteContent">
-		<item>Tomdroid へようこそ！\n</item>
-		<item>まだメモはありません。始めるには、設定項目の同期設定を行なってください。以下で説明する2つの同期オプションがあります。\n</item>
-		<item>=オンライン同期=</item>
-		<!-- =text= makes <size:large>text</size:large> -->
-		<item>Tomboy-Online やご自身の Reiny/Snowy サーバー、もしくは Tomboy Web REST API に対応したあらゆるサーバーと動機したい場合、オンライン同期を利用できます。\n</item>
-		<item>これを利用するには、設定項目の同期サービスをオンライン同期にし、サーバーのURLを指定します。以下に一般的なものをいくつか示します:</item>
-		<!-- -text is for list-items. --> 
-		<item>-Tomboy Online - https://edge.tomboy-online.org/</item>
-		<!-- -text is for list-items. --> 
-		<item>-rainy.notesync.org - https://notesync.org:8080/[username]/[password]/\n</item>
-		<item>設定したら、Tomboy 上部のバーの同期ロゴをタッチしてメモを同期します。\n</item>
-		<item>メモ: このアプリは開発途上のため、Tomboy メモを破壊する可能性があります。同期前に Tomboy メモをバックアップしておくと良いでしょう。\n</item>
-		<item>http://live.gnome.org/Tomboy/Directories を参照し、全てのプラットフォームにおける *.note ファイルの場所を調べて下さい。\n</item>
-		<!-- =text= makes <size:large>text</size:large> --> 
-		<item>=SDカード=</item>
-		<item>Put your Tomboy notes (*.note) on your SD Card under tomdroid/. Once the notes are copied, set Sync Service to SD Card in preferences then hit the Sync logo on Tomdroid\'s top bar.\n</item>
-		<item>Also, Tomdroid is always looking for new contributors. If you are interested join the tomdroid-dev team on Launchpad: http://launchpad.net/~tomdroid-dev.\n</item>
-		<item>最後に、何らかの問題に遭遇した場合は、以下に報告をお願いします: https://bugs.launchpad.net/tomdroid</item>
-	</string-array>
-	
 	<!-- 
 	Information that goes into the Android Market Application Listing. 
 	I\'ve put it in here so that it\'ll get translated by translators.

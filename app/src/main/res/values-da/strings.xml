@@ -348,30 +348,6 @@
 	<string name="noFiles">Ingen filer eller direktorier</string>
 	<string name="chooseFile">Vælg en fil nedenfor der er enten en Tomboy note fil (som vil blive importeret) eller en almindelig tekstfil (som vil oprette en ny note):</string>
 
-	<!-- Title of first Note -->
-	<string name="firstNoteTitle">Tomdroid\'s første note</string>
-	
-	<string-array name="firstNoteContent">
-		<item>Velkommen til Tomdroid!\n</item>
-		<item>Du har ingen noter her endnu. For at komme i gang skal du indstille dine synkronisering præferencer under Indstillinger. Der er to synkroniseringsindstillinger beskrevet nedenfor.\n</item>
-		<item>=Online synkronisering=</item>
-		<!-- =text= makes <size:large>text</size:large> -->
-		<item>Online Synkronisering er, hvad du leder efter, hvis du ønsker at synkronisere til Tomboy-Online, din egen Rainy/Snowy server eller anden server, der understøtter Tomboy Web REST API. \n</item>
-		<item>For at bruge den, skal du indstille synkroniseringsmetode til Online Synkronisering i præferencerne og derefter indtaste en Server URL. Her er nogle af de offentlige muligheder:</item>
-		<!-- -text is for list-items. --> 
-		<item>-Tomboy Online - https://edge.tomboy-online.org/</item>
-		<!-- -text is for list-items. --> 
-		<item>-rainy.notesync.org - https://notesync.org:8080/[username]/[password]/\n</item>
-		<item>Når de er indstillet, klik på Sync logoet i Tomdroid\'s top bar for at synkronisere dine noter.\n</item>
-		<item>Bemærk: Du kunne måske ønske at sikkerhedskopiere dine Tomboy noter inden synkronisering, da denne app stadig er under udvikling, og kan beskadige dine Tomboy noter.\n</item>
-		<item>Se venligst http://live.gnome.org/Tomboy/Directories for placeringen af *.note filerne for alle platforme.\n</item>
-		<!-- =text= makes <size:large>text</size:large> --> 
-		<item>=SD kort=</item>
-		<item>Kom dine Tomboy noter (*.note) på dit SD kort under tomdroid/. Når noterne er kopierede, sæt da Sync Service til SD kort under indstilliger. Tryk derefter på Synkroniser logoet i Tomdroids top bar.\n</item>
-		<item>Tomdroid søger altid nye biddragsydere. Hvis du er interesseret, tilslut dig da tomdroids udviklingsteam på Launchpad: http://launchpad.net/~tomdroid-dev.\n</item>
-		<item>Endeligt, hvis du oplever problemer, være venlig at rapportere dem her: https://bugs.launchpad.net/tomdroid</item>
-	</string-array>
-	
 	<!-- 
 	Information that goes into the Android Market Application Listing. 
 	I\'ve put it in here so that it\'ll get translated by translators.

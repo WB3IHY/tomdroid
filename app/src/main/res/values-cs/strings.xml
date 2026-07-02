@@ -348,30 +348,6 @@
 	<string name="noFiles">Žádné soubory nebo složky</string>
 	<string name="chooseFile">Vyberte soubor níže, který je buď poznámka Tomboy (bude importována) nebo plain text soubor (bude vytvořen jako nová poznámka):</string>
 
-	<!-- Title of first Note -->
-	<string name="firstNoteTitle">První poznámka Tomdroidu</string>
-	
-	<string-array name="firstNoteContent">
-		<item>Vítejte v Tomdroidu!\n</item>
-		<item>Nemáte zde zatím žádné poznámky. Začněte nastavením synchronizace v NastaveníNíže jsou popsány dvě synchronizační možnosti.\n</item>
-		<item>=Online synchronizace=</item>
-		<!-- =text= makes <size:large>text</size:large> -->
-		<item>Použijte Online Synchronizaci v případě, že chcete synchronizovat s Tomboy-Online, s vaším vlastním Rainy/Snowy serverem nebo s jakýmkoliv jiným serverem podporujícím Tomboy Web REST API. \n</item>
-		<item>Pro použití nastavte synchronizační službu na online synchronizaci in možnostech, pak nastavte URL serveru. Zde je několik veřejných:</item>
-		<!-- -text is for list-items. --> 
-		<item>-Tomboy Online - https://edge.tomboy-online.org/</item>
-		<!-- -text is for list-items. --> 
-		<item>-rainy.notesync.org - https://notesync.org:8080/[username]/[password]/\n</item>
-		<item>Jakmile je nastaveno, klikněte na synchronizační logo na liště nahoře pro synchronizaci vašich poznámek.\n</item>
-		<item>Poznámka: je vhodné zálohovat vaše Tomboy poznámky před synchronizací, protože tato aplikace je stále ve vývoji a mohla by poškodit vaše Tomboy poznámky.\n</item>
-		<item>Navštivte http://live.gnome.org/Tomboy/Directories pro zjištění lokace *.note souborů na všech platformách.\n</item>
-		<!-- =text= makes <size:large>text</size:large> --> 
-		<item>=SD karta=</item>
-		<item>Vložte vaše Tomboy poznámky (*.note) na vaši SD kartu do adresáře tomdroid/. Jakmile budou vaše poznámky zkopírovány, nastavte Sync Service na SD kartu v nastavení a poté stiskněte Sync logo na horní liště Tomdroidu.\n</item>
-		<item>Tomdroid také stále hledá nové přispěvatele. Pokud vás nabídka zaujala, přidejte se do tomdroid-dev týmu na Launchpadu: http://launchpad.net/~tomdroid-dev.\n</item>
-		<item>Pokud naleznete jakýkoliv problém, oznamte ho prosím na: https://bugs.launchpad.net/tomdroid</item>
-	</string-array>
-	
 	<!-- 
 	Information that goes into the Android Market Application Listing. 
 	I\'ve put it in here so that it\'ll get translated by translators.

@@ -348,30 +348,6 @@
 	<string name="noFiles">Nema datoteka ili mapa</string>
 	<string name="chooseFile">Odaberite datoteku koje je ili Tomboy bilješka (koja će biti uvezena) ili običan tekst (što će stvoriti novu bilješku):</string>
 
-	<!-- Title of first Note -->
-	<string name="firstNoteTitle">Tomdroid-ova prva bilješka</string>
-	
-	<string-array name="firstNoteContent">
-		<item>Dobrodošli u Tomdroid!\n</item>
-		<item>Još nemate bilješki. Za početak namjestite postavke usklađivanja pod Postavkama. Dva načina usklađivanja su opisani ispod.\n</item>
-		<item>=Mrežno usklađivanje=</item>
-		<!-- =text= makes <size:large>text</size:large> -->
-		<item>Mrežno usklađivanje koristite za sinkronizaciju s Tomboy-Online, vlastiti Rainy/Snowy server ili neki drugi server koji podržava Tomboy Web REST API.\n</item>
-		<item>Za korištenje, postavite Sinkronizacijski servis na mrežno usklađivanje u Postavkama te zatim unesite URL servera. Nekoliko javnih primjera:</item>
-		<!-- -text is for list-items. --> 
-		<item>-Tomboy Online - https://edge.tomboy-online.org/</item>
-		<!-- -text is for list-items. --> 
-		<item>-rainy.notesync.org - https://notesync.org:8080/[username]/[password]/\n</item>
-		<item>Jednom postavljeno, odaberite sinkronizacijski logo u traci na vrhu za usklađivanje.\n</item>
-		<item>Napomena:poželjno je napraviti sigurnosnu kopiju prije sinkronizacije, ova aplikacija je i dalje u razvoju te može oštetiti Tomboy bilješke.\n</item>
-		<item>Pogledajte http://live.gnome.org/Tomboy/Directories za lokaciju *.note datoteka na svim platformama.\n</item>
-		<!-- =text= makes <size:large>text</size:large> --> 
-		<item>=SD kartica=</item>
-		<item>Postavite Tomboy bilješke (*.note) na SD karticu pod tomdroid/. Nakon kopiranja bilješki, postavite Sinkronizacijski servis na SD karticu pod Postavkama i zatim učinite usklađivanje odabirom ikone u gornjoj traci.\n</item>
-		<item>Također, Tomdroid uvijek traži nove suradnike. Ako ste zainteresirani za posao, pridružite se tomdroid-dev timu na  Launchpad: http://launchpad.net/~tomdroid-dev.\n</item>
-		<item>Na kraju ako susretnete problem ili grešku, molimo javite na: https://bugs.launchpad.net/tomdroid</item>
-	</string-array>
-	
 	<!-- 
 	Information that goes into the Android Market Application Listing. 
 	I\'ve put it in here so that it\'ll get translated by translators.

@@ -348,30 +348,6 @@
 	<string name="noFiles">Sem ficheiros ou diretórios</string>
 	<string name="chooseFile">Escolha o ficheiro que tem de ser um ficheiro Tomboy (será importado) ou um ficheiro de texto (será criada uma nova nota):</string>
 
-	<!-- Title of first Note -->
-	<string name="firstNoteTitle">Primeira nota do Tomdroid</string>
-	
-	<string-array name="firstNoteContent">
-		<item>Bem-vindo ao Tomdroid\n</item>
-		<item>Ainda não existem notas. Para começar, defina as opções de sincronização nas definições. Existem dois métodos de sincronização:</item>
-		<item>=Sincronização web=</item>
-		<!-- =text= makes <size:large>text</size:large> -->
-		<item>Se optar pela sincronização web, pode efetuar sincronizações com o serviço Tomboy-Online, com um servidor Rainy/Snowy ou qualquer outro com suporte à API Tomboy Web REST.</item>
-		<item>Para a utilizar, defina a opção Sincronização web e indique o URL do servidor. Por exemplo:</item>
-		<!-- -text is for list-items. --> 
-		<item>-Tomboy Online - https://edge.tomboy-online.org/</item>
-		<!-- -text is for list-items. --> 
-		<item>-rainy.notesync.org - https://notesync.org:8080/[nome_de_utilizador]/[senha]/\n</item>
-		<item>Assim que definir, clique no ícone da barra superior para sincronizar as notas.\n</item>
-		<item>Nota: deve criar uma cópia de segurança das suas notas Tomboy, uma vez que esta aplicação ainda está em desenvolvimento e pode destruir as suas notas.\n</item>
-		<item>Consulte http://live.gnome.org/Tomboy/Directories para saber a localização dos ficheiros *.note em todas as plataformas.\n</item>
-		<!-- =text= makes <size:large>text</size:large> --> 
-		<item>=Cartão SD=</item>
-		<item>Coloque as notas Tomboy (*.note) na pasta tomdroid do cartão SD. Assim que as notas forem copiadas, escolha Sincronização SD nas preferências e clique em Sincronizar na barra superior do Tomdroid.</item>
-		<item>O Tomdroid aceita os contributos dos utilizadores. Se estiver interessado em ajudar, integre a equipa de desenvolvimento em http://launchpad.net/~tomdroid-dev.\n</item>
-		<item>Se encontrar algum erro, reporte-o em  https://bugs.launchpad.net/tomdroid</item>
-	</string-array>
-	
 	<!-- 
 	Information that goes into the Android Market Application Listing. 
 	I\'ve put it in here so that it\'ll get translated by translators.

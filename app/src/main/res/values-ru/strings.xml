@@ -348,30 +348,6 @@
 	<string name="noFiles">Не найден файл или папка</string>
 	<string name="chooseFile">Выберите файл ниже, который будет импортирован (как Tomboy-заметка) или текстовый файл (из которого будет создана новая заметка):</string>
 
-	<!-- Title of first Note -->
-	<string name="firstNoteTitle">Первая заметка Tomdroid</string>
-	
-	<string-array name="firstNoteContent">
-		<item>Добро пожаловать в Tomdroid!\n</item>
-		<item>У пока нет заметок. Чтобы приступить к работе, задайте настройки синхронизации в меню Настройки. Есть две опции синхронизации, описанные ниже.\n</item>
-		<item>=Онлайн синхронизация=</item>
-		<!-- =text= makes <size:large>text</size:large> -->
-		<item>Онлайн синхронизация — отличный выбор для синхронизации с Tomboy Online или вашим собственным сервером Rainy/Snowy, или любым другим сервером, поддерживающим Tomboy Web REST API.\n</item>
-		<item>Чтобы использовать его, выберите Сервис Синхронизации в пункте Онлайн Синхронизация в настройках, указав URL-адрес сервера. Вот некоторые из них:</item>
-		<!-- -text is for list-items. --> 
-		<item>-Tomboy сайт - https://edge.tomboy-online.org/</item>
-		<!-- -text is for list-items. --> 
-		<item>-Rainy.notesync.org - https://notesync.org:8080/[имя пользователя]/[пароль]/\n</item>
-		<item>После установки, нажмите кнопку Синхронизация на верхней панели Tomdroid для синхронизации заметок.\n</item>
-		<item>Примечание: Вы можете создать резервную копию заметки Tomboy перед синхронизацией. Так как это приложение находится в стадии разработки, то возможно повреждение Ваших заметок.\n</item>
-		<item>Пожалуйста, ознакомьтесь с http://live.gnome.org/Tomboy/Directories перед размещением *. Обратите внимание, файлы на всех платформах.\n</item>
-		<!-- =text= makes <size:large>text</size:large> --> 
-		<item>=SD-Карта=</item>
-		<item>Поместите свои заметки Tomboy (*.note) на SD карту в папку tombdroid/. Когда заметки будут скопированы, установите в настройках в качестве Сервиса Синхронизации SD карту, после чего нажмите на кнопку Синхронизация на верхней панели Tomdroid.\n</item>
-		<item>Кроме того, Tomdroid всегда ищет новых участников. Присоединяйтесь к tomdroid-dev команде на Launchpad: http://launchpad.net/~tomdroid-dev.\n</item>
-		<item>Наконец, если у вас возникнут проблемы, пожалуйста, сообщите об этом по адресу: https://bugs.launchpad.net/tomdroid</item>
-	</string-array>
-	
 	<!-- 
 	Information that goes into the Android Market Application Listing. 
 	I\'ve put it in here so that it\'ll get translated by translators.

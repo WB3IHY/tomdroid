@@ -378,29 +378,19 @@
 	    <!-- placehoder-1 is a linebreak -->
 		<item>Welcome to Tomdroid<xliff:g id="linebreak">!\n</xliff:g></item>
 		<!-- placehoder-1 is a linebreak -->
-		<item>You have no notes here yet. To get started, set your Synchronization preferences under Settings. There are two synchronization options described below.<xliff:g id="linebreak">\n</xliff:g></item>
+		<item>You have no notes here yet. Set your Synchronization preferences under Settings to pull in your notes. There are two synchronization options described below.<xliff:g id="linebreak">\n</xliff:g></item>
 		<!-- headline, please keep the = on beginning and end! -->
 		<item>=Online Synchronization=</item>
-		<item>Online Synchronization is what you are looking for if you want to sync to Tomboy-Online, your own Rainy/Snowy server or any server supporting the Tomboy Web REST API.<xliff:g id="linebreak">\n</xliff:g></item>
-		<item>To use it, set Sync Service to Online Synchronization in preferences then  provide a Server URL. Here are some of the public ones:</item>
-		<!-- placeholder-1 is a bulletlist icon, placeholder-2 a link to the webpage --> 
-		<item><xliff:g id="listitem">-</xliff:g>Tomboy Online<xliff:g id="url"> - https://edge.tomboy-online.org/</xliff:g></item>
-		<!-- placeholder-1 is a bulletlist icon, placeholder-2 a link to the webpage --> 
-		<item><xliff:g id="listitem">-</xliff:g>Rainy Sync Server<xliff:g id="url"> - https://www.notesync.org/\n</xliff:g></item>
 		<!-- placehoder-1 is a linebreak -->
-		<item>Once set, hit the Sync logo on Tomdroid\'s top bar to synchronize your notes.<xliff:g id="linebreak">\n</xliff:g></item>
+		<item>Use this to sync against a Tomboy Web REST API server, such as a self-hosted grauphel instance.<xliff:g id="linebreak">\n</xliff:g></item>
 		<!-- placehoder-1 is a linebreak -->
-		<item>Note: you might want to back up your Tomboy notes before syncing, since this app is still under development and may corrupt your Tomboy notes.<xliff:g id="linebreak">\n</xliff:g></item>
-		<!-- placehoder-1 is a link. placeholder-2 a file extension and placeholder-3 a linebreak -->
-		<item>Please see <xliff:g id="url">http://live.gnome.org/Tomboy/Directories</xliff:g> for the location of the <xliff:g id="extension">*.note</xliff:g> files on all platforms.<xliff:g id="linebreak">\n</xliff:g></item>
+		<item>To use it, set Service to Online Synchronization in preferences, then provide the Server URL for your sync server. Once set, hit the Sync logo on Tomdroid\'s top bar to synchronize your notes.<xliff:g id="linebreak">\n</xliff:g></item>
 		<!-- headline, please keep the = on beginning and end! -->
 		<item>=SD Card=</item>
 		<!-- placeholder-1 is a file extension, placeholder-2 a folder location and placeholder-3 a linebreak -->
-		<item>Put your Tomboy notes <xliff:g id="extension">(*.note)</xliff:g> on your SD Card under <xliff:g id="folder">tomdroid/</xliff:g>. Once the notes are copied, set Sync Service to SD Card in preferences then hit the Sync logo on Tomdroid\'s top bar.<xliff:g id="linebreak">\n</xliff:g></item>
-		<!-- placehoder-1 is a link and placeholder-2 a linebreak -->
-		<item>Also, Tomdroid is always looking for new contributors. If you are interested join the tomdroid-dev team on Launchpad: <xliff:g id="url">http://launchpad.net/~tomdroid-dev</xliff:g>.<xliff:g id="linebreak">\n</xliff:g></item>
-		<!-- placehoder-1 is a link -->
-		<item>Lastly, if you encounter any issue, please report it at: <xliff:g id="url">https://bugs.launchpad.net/tomdroid</xliff:g></item>
+		<item>Put your Tomboy notes <xliff:g id="extension">(*.note)</xliff:g> on your SD Card under <xliff:g id="folder">tomdroid/</xliff:g>. Once the notes are copied, set Service to SD Card in preferences then hit the Sync logo on Tomdroid\'s top bar.<xliff:g id="linebreak">\n</xliff:g></item>
+		<!-- placehoder-1 is a linebreak -->
+		<item>Note: back up your notes before syncing, just in case.</item>
 	</string-array>
 	
 	<!-- 

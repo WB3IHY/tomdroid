@@ -348,30 +348,6 @@
 	<string name="noFiles">Inga filer eller mappar</string>
 	<string name="chooseFile">Välj en fil nedan som antingen är en Tomboy-anteckningsfil (importera en anteckning) eller en oformaterad textfil (skapa en ny anteckning):</string>
 
-	<!-- Title of first Note -->
-	<string name="firstNoteTitle">Tomdroids första anteckning</string>
-	
-	<string-array name="firstNoteContent">
-		<item>Välkommen till Tomdroid!\n</item>
-		<item>Du har inga anteckningar här ännu. För att komma igång måste du ange dina synkroniseringsinställningar under Inställningar. Det finns två synkroniseringsalternativ, som beskrivs nedan.\n</item>
-		<item>=Onlinesynkronisering=</item>
-		<!-- =text= makes <size:large>text</size:large> -->
-		<item>Onlinesynkronisering är till för dig som vill synkronisera med Tomboy-Online, din egen Rainy/Snowy-server eller en annan server som stöder Tomboys API Web REST.\n</item>
-		<item>För att använda det, ställ in synkroniseringstjänsten till Onlinesynkronisering i inställningarna och ange en serveradress. Här är några av de offentliga servrarna:</item>
-		<!-- -text is for list-items. --> 
-		<item>-Tomboy Online - https://edge.tomboy-online.org/</item>
-		<!-- -text is for list-items. --> 
-		<item>-rainy.notesync.org - https://notesync.org:8080/[användarnamn]/[lösenord]/\n</item>
-		<item>När allt är inställt, klicka på synkroniseringsikonen i Tomdroids verktygsfält för att synkronisera dina anteckningar.\n</item>
-		<item>Obs: vi rekommenderar att du säkerhetskopierar dina Tomboy-anteckningar innan synkronisering, eftersom det här programmet fortfarande är under utveckling och kan skada dina anteckningsfiler.\n</item>
-		<item>Gå till http://live.gnome.org/Tomboy/Directories för platsinformation om *.note-filer på alla plattformar.\n</item>
-		<!-- =text= makes <size:large>text</size:large> --> 
-		<item>=SD-kort=</item>
-		<item>Lägg dina Tomboy-anteckningar (*.note) på ditt SD-kort under "tomdroid/". När anteckningarna har kopierats anger du inställningen Synkroniseringstjänst till "SD-kort" och klickar på synkroniseringsikonen i Tomdroids verktygsfält.\n</item>
-		<item>Tomdroid söker ständigt efter nya medarbetare. Om du är intresserad kan du ansluta dig till Tomdroids utvecklingsgrupp på Launchpad: http://launchpad.net/~tomdroid-dev.\n</item>
-		<item>Sist, men inte minst. Om du stöter på något problem, var vänlig och rapportera det på: https://bugs.launchpad.net/tomdroid</item>
-	</string-array>
-	
 	<!-- 
 	Information that goes into the Android Market Application Listing. 
 	I\'ve put it in here so that it\'ll get translated by translators.

@@ -348,30 +348,6 @@
 	<string name="noFiles">Tiada fail atau direktori</string>
 	<string name="chooseFile">Pilih fail dibawah sama ada fail Nota Tomboy (yang akan diimportkan) atau fail teks biasa (yang akan cipta nota baru):</string>
 
-	<!-- Title of first Note -->
-	<string name="firstNoteTitle">Nota Pertama Tomdroid</string>
-	
-	<string-array name="firstNoteContent">
-		<item>Selamat Datang ke Tomdroid!\n</item>
-		<item>Anda tidak mempunyai nota disini. Untuk mula, tetapkan keutamaan Penyegerakan anda dibawah Tetapam. Terdapat dua pilihan penyegerakan yang diterangkan dibawah.</item>
-		<item>=Penyegerakan Atas Talian=</item>
-		<!-- =text= makes <size:large>text</size:large> -->
-		<item>Penyegerakan atas talian adalah apa yang anda cari jika anda mahu segerak ke Tomboy-Online, pelayan Rainy/Snowy atau mana-mana pelayan yang menyokong API REST Web Tomboy.\n</item>
-		<item>Untuk gunakannya, tetapkan Perkhidmatan kepada Penyegerakan Atas Talian dalam keutmamaan kemudian sediakan URL Pelayan. Disini terdapat beberapa pelayan awam:</item>
-		<!-- -text is for list-items. --> 
-		<item>-Tomboy Atas Talian - https://edge.tomboy-online.org/</item>
-		<!-- -text is for list-items. --> 
-		<item>-rainy.notesync.org - https://notesync.org:8080/[username]/[password]/\n</item>
-		<item>Bila sudah ditetapkan, tekan logo segerak pada palang atas Tomdroid untuk segerakam nota anda.\n</item>
-		<item>Perhatian: anda mungkin mahu sandar nota Tomboy anda sebelum menyegerak, kerana aplikasi ini masih dibawah pembangunan dan mungkin merosakkan nota Tomboy.\n</item>
-		<item>Sila rujuk http://live.gnome.org/Tomboy/Directories untuk lokasi fail *.note pada semua platform.\n</item>
-		<!-- =text= makes <size:large>text</size:large> --> 
-		<item>=Kad SD=</item>
-		<item>Letak nota Tomboy anda (*.n0ote) ke dalam Kad CD anda dibawah tomdroid/. Bila nota telah disalin, tetapkan Perkhidmatan Segerak ke Kad SD dalam keutamaan kemudian tekan logo Segerak pada palang atas Tomdroid.\n</item>
-		<item>Juga, Tomdroid juga sentiasa mencari penyumbang baru. Jika anda berminat sertai pasukan tomdroid-dev di Launchpad: http://launchpad.net/~tomdroid-dev.\n</item>
-		<item>AKhir sekali, jika anda mengalami sebarang masalah, sila laporkannya di: https://bugs.launchpad.net/tomdroid</item>
-	</string-array>
-	
 	<!-- 
 	Information that goes into the Android Market Application Listing. 
 	I\'ve put it in here so that it\'ll get translated by translators.

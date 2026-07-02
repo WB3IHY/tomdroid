@@ -348,30 +348,6 @@
 	<string name="noFiles">Brak plików lub katalogów</string>
 	<string name="chooseFile">Wybierz plik poniżej, który jest plikiem notatki Tomboy (który zostanie zaimportowany) lub plikiem ze zwykłym tekstem (co spowoduje utworzenie nowej notatki):</string>
 
-	<!-- Title of first Note -->
-	<string name="firstNoteTitle">Pierwsza notatka Tomdroid</string>
-	
-	<string-array name="firstNoteContent">
-		<item>Witaj w Tomdroid!\n</item>
-		<item>Nie masz jeszcze żadnych notatek. By rozpocząć, ustaw swoje preferencje Synchronizacji w Ustawieniach. Istnieją dwie opcje synchronizacji, opisane poniżej.\n</item>
-		<item>=Synchronizacha online=</item>
-		<!-- =text= makes <size:large>text</size:large> -->
-		<item>Online Synchronization is what you are looking for if you want to sync to Tomboy-Online, your own Rainy/Snowy server or any server supporting the Tomboy Web REST API.\n</item>
-		<item>By tego użyć, ustaw usługę synchronizacji na Synchronizację online w preferencjach, a następnie podaj URL serwera. Tu jest kilka publicznych serwerów:</item>
-		<!-- -text is for list-items. --> 
-		<item>-Tomboy Online - https://edge.tomboy-online.org/</item>
-		<!-- -text is for list-items. --> 
-		<item>-rainy.notesync.org - https://notesync.org:8080/[username]/[password]/\n</item>
-		<item>Po ustawieniu, kliknij logo Synchronizacji na górnym pasku Tomdroid by zsynchronizować swoje notatki.\n</item>
-		<item>Uwaga: zalecane jest zrobić kopię zapasową Twoich notatek z Tomboy przed synchronizacja, gdyż ta aplikacja jest nadal w fazie rozwoju i może uszkodzić Twoje notatki z Tomboy.\n</item>
-		<item>Odwiedź http://live.gnome.org/Tomboy/Directories by poznać lokalizacje plików *.note na wszystkich platformach.\n</item>
-		<!-- =text= makes <size:large>text</size:large> --> 
-		<item>=Karta SD=</item>
-		<item>Umieść swoje notatki z Tomboy (*.note) na karcie SD w folderze tomdroid/. Po skopiowaniu notatek, ustaw usługę synchronizacji jako karta SD w preferencjach i kliknij logo synchronizacji na górnym pasku Tomdroid.\n</item>
-		<item>Tomdroid jest także otwarty na wszelką pomoc. Jeśli jesteś zainteresowany, dołącz do grupy tomdroid-dev na Launchpadzie: http://launchpad.net/~tomdroid-dev.\n</item>
-		<item>Jeśli napotkasz jakiś problem z aplikacją, prosimy o zgłoszenie go tutaj: https://bugs.launchpad.net/tomdroid</item>
-	</string-array>
-	
 	<!-- 
 	Information that goes into the Android Market Application Listing. 
 	I\'ve put it in here so that it\'ll get translated by translators.

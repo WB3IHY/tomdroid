@@ -348,30 +348,6 @@
 	<string name="noFiles">No files or directories</string>
 	<string name="chooseFile">Choose a file below that is either a Tomboy note file (which will be imported) or a plain text file (which will create a new note):</string>
 
-	<!-- Title of first Note -->
-	<string name="firstNoteTitle">Primeira nota de Tomdroid</string>
-	
-	<string-array name="firstNoteContent">
-		<item>Benvido a Tomdroid!\n</item>
-		<item>Aínda non tes notas. Para comezar, axusta as túas preferencias de sincronización no menú Axustes. As dúas opcións que tes descrébense debaixo.\n</item>
-		<item>= Sincronización en liña=</item>
-		<!-- =text= makes <size:large>text</size:large> -->
-		<item>Se queres sincronizar en liña precisas o teu propio servidor Rainy/Snowy ou calquera outro servidor que ature o Tomdroid Web REST API.\n</item>
-		<item>Para usalo, escolle o Servizo de Sincronización en liña nas túas preferencias, despois engade a URL de servidor. Aquí hai algunhas que son públicas:</item>
-		<!-- -text is for list-items. --> 
-		<item>-Tomboy en liña- https://edge.tomboy-online.org/</item>
-		<!-- -text is for list-items. --> 
-		<item>-rainy.notesync.org - https://notesync.org:8080/[username]/[password]/\n</item>
-		<item>Cando o selecciones, pulsa no icono de Sincronización da barra superior de Tomdroid para sincroniza-las túas notas.\n</item>
-		<item>Nota: Quizais desexes facer unha copia das túas notas de Tomdroid antes de sincronizar, como esta app aínda está en desenvolvemento pode estragar algúns datos.</item>
-		<item>Por favor, visita http://live.gnome.org/Tomboy/Directories para atopar os ficheiros *.note en tódalas plataformas.\n</item>
-		<!-- =text= makes <size:large>text</size:large> --> 
-		<item>=Tarxeta SD=</item>
-		<item>Engade as túas notas de Tomdroid (*.note) na túa tarxeta SD no directorio /tomdroid. Cando as notas se copien, axusta o Servizo de sincronización cara a tarxeta SD no menú preferencias, entón pulsa o icono de Sincronización na barra superior de Tomdroid.\n</item>
-		<item>Tamén, Tomdroid está sempre buscando novos colaboradores. Se estás interesado en pertencer ó equipo de desenvolvemento de Tomdroid en Launchpad: http://launchpad.net/~tomdroid-dev.\n</item>
-		<item>Para rematar, se te atopas con algún erro, por favor, infórmanos en https://bugs.launchpad.net/tomdroid</item>
-	</string-array>
-	
 	<!-- 
 	Information that goes into the Android Market Application Listing. 
 	I\'ve put it in here so that it\'ll get translated by translators.
