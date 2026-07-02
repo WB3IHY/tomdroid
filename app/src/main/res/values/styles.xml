@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
     <style name="LightTheme" parent="@android:style/Theme.Light">
+        <!-- We ship our own values-night resources; opt out of the system's Force Dark
+             heuristic so it doesn't also try to auto-invert custom-drawn drawables
+             (GradientDrawable backgrounds are handled inconsistently by it). -->
+        <item name="android:forceDarkAllowed">false</item>
         <item name="android:windowTitleSize">@dimen/actionbar_compat_height</item>
         <item name="android:windowTitleBackgroundStyle">@style/ActionBarCompat</item>
         <item name="android:windowContentOverlay">@drawable/actionbar_shadow</item>

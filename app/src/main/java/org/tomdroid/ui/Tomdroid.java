@@ -70,6 +70,7 @@ import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.res.Configuration;
 import android.database.Cursor;
 import android.graphics.Paint;
+import android.graphics.drawable.GradientDrawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -271,9 +272,10 @@ public class Tomdroid extends ActionBarListActivity {
 		if(rightPane != null) {
 			content = (TextView) findViewById(R.id.content);
 			title = (TextView) findViewById(R.id.title);
-			
+
 			// this we will call on resume as well.
 			updateTextAttributes();
+			updateListPaneBackground();
 			showNoteInPane(0);
 		}
 		
@@ -943,6 +945,27 @@ public class Tomdroid extends ActionBarListActivity {
 		content.setBackgroundColor(getColor(R.color.note_background));
 		content.setTextColor(getColor(R.color.note_text));
 	}
+
+	// layout-sw600dp-land/main.xml's list background/divider (drop_shadow,
+	// drop_shadow_separator) are GradientDrawables set via android:background/divider in
+	// XML; on some devices that resolution path doesn't pick up the values-night color
+	// variant reliably (row text, resolved via getColor() in Java, always does). Building
+	// the same gradients here in code sidesteps that by using the proven-reliable path.
+	private void updateListPaneBackground() {
+		int shadowStart = getColor(R.color.list_pane_shadow_start);
+		int shadowEnd = getColor(R.color.list_pane_shadow_end);
+		getListView().setBackground(new GradientDrawable(GradientDrawable.Orientation.LEFT_RIGHT,
+				new int[] { shadowStart, shadowEnd }));
+
+		int dividerStart = getColor(R.color.list_divider_start);
+		int dividerEnd = getColor(R.color.list_divider_end);
+		GradientDrawable divider = new GradientDrawable(GradientDrawable.Orientation.LEFT_RIGHT,
+				new int[] { dividerStart, dividerEnd });
+		divider.setSize(0, 2);
+		getListView().setDivider(divider);
+		getListView().setDividerHeight(2);
+	}
+
 	private void showNoteInPane(int position) {
 		if(rightPane == null)
 			return;

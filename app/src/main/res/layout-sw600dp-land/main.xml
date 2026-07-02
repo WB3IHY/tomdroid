@@ -26,12 +26,12 @@
   android:layout_width="match_parent"
   android:layout_height="match_parent"
   android:id="@+id/main">
+	<!-- background/divider are set in Java (Tomdroid.updateListPaneBackground()) rather
+	     than here, since XML-inflated GradientDrawable resources didn't reliably pick up
+	     the values-night color variant on some devices. -->
 	<ListView android:id="@android:id/list"
     	android:layout_width="@dimen/left_width"
 		android:layout_height="fill_parent"
-    	android:background="@drawable/drop_shadow"
-    	android:divider="@drawable/drop_shadow_separator"
-    	android:dividerHeight="2dp"
 		/>
 	<include android:id="@+id/right_pane" layout="@layout/note_view" />
 </LinearLayout>

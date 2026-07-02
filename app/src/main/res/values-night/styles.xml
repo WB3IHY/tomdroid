@@ -4,6 +4,10 @@
          activity (which all reference @style/LightTheme) follows the system
          day/night setting automatically. -->
     <style name="LightTheme" parent="@android:style/Theme.Holo">
+        <!-- We ship our own dark-mode resources here; opt out of the system's Force
+             Dark heuristic so it doesn't also try to auto-invert custom-drawn
+             drawables (GradientDrawable backgrounds are handled inconsistently by it). -->
+        <item name="android:forceDarkAllowed">false</item>
         <item name="android:windowTitleSize">@dimen/actionbar_compat_height</item>
         <item name="android:windowTitleBackgroundStyle">@style/ActionBarCompatDark</item>
         <item name="android:windowContentOverlay">@drawable/actionbar_shadow</item>
