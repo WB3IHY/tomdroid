@@ -5,4 +5,9 @@
     <color name="note_text">#FF444444</color>
     <color name="note_title">#FF0000FF</color>
     <color name="format_bar_background">#FFC4C6C4</color>
+    <!-- tablet two-pane list background/divider (layout-sw600dp-land), overridden in values-night -->
+    <color name="list_pane_shadow_start">#FFE6E6E6</color>
+    <color name="list_pane_shadow_end">#FFD9D9D9</color>
+    <color name="list_divider_start">#FFD3D3D3</color>
+    <color name="list_divider_end">#FFE0E0E0</color>
 </resources>
