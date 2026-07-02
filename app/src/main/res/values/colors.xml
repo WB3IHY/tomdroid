@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- note view/edit background and text colors, overridden in values-night for dark mode -->
+    <color name="note_background">#FFFFFFFF</color>
+    <color name="note_text">#FF444444</color>
+    <color name="note_title">#FF0000FF</color>
+    <color name="format_bar_background">#FFC4C6C4</color>
+</resources>

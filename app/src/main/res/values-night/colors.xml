@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="note_background">#FF1E1E1E</color>
+    <color name="note_text">#FFE0E0E0</color>
+    <color name="note_title">#FF82B1FF</color>
+    <color name="format_bar_background">#FF2C2C2C</color>
+</resources>

@@ -1,0 +1,72 @@
+apply plugin: 'com.android.application'
+
+android {
+    namespace 'org.tomdroid'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId 'org.tomdroid'
+        minSdk 24
+        targetSdk 29
+        versionCode 1
+        versionName '1.0.0'
+    }
+
+    // Legacy JUnit3/instrumentation test classes (android.test.*) used by the
+    // old test suite in src/androidTest need these optional platform libraries.
+    useLibrary 'android.test.runner'
+    useLibrary 'android.test.base'
+
+    // The web sync code (org.tomdroid.sync.web.*) uses org.apache.http.* classes
+    // that were removed from the Android SDK in API 23+.
+    useLibrary 'org.apache.http.legacy'
+
+    // Release signing is configured entirely from environment variables at build time
+    // (RELEASE_STORE_FILE, RELEASE_STORE_PASSWORD, RELEASE_KEY_ALIAS, RELEASE_KEY_PASSWORD) —
+    // nothing secret or machine-specific is ever committed here.
+    signingConfigs {
+        release {
+            def storeFilePath = System.getenv("RELEASE_STORE_FILE")
+            if (storeFilePath != null) {
+                storeFile file(storeFilePath)
+            }
+            storePassword System.getenv("RELEASE_STORE_PASSWORD")
+            keyAlias System.getenv("RELEASE_KEY_ALIAS")
+            keyPassword System.getenv("RELEASE_KEY_PASSWORD")
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    applicationVariants.all { variant ->
+        if (variant.buildType.name == "release") {
+            variant.outputs.all { output ->
+                outputFileName = "tomdroid-wb3ihy-${variant.versionName}.apk"
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: '*.jar')
+
+    // signpost (OAuth request signing for web sync, libs/signpost-*.jar) needs
+    // org.apache.commons.codec.binary.Base64. Old Android bundled this for free
+    // alongside its built-in Apache HttpClient; modern Android dropped it entirely,
+    // so it has to be provided as a real dependency now.
+    implementation 'commons-codec:commons-codec:1.15'
+}
