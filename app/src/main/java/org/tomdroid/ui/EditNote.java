@@ -48,6 +48,7 @@ import org.tomdroid.xml.NoteContentHandler;
 import org.tomdroid.xml.NoteXMLContentBuilder;
 import org.xml.sax.InputSource;
 
+import android.app.ActionBar;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -58,7 +59,9 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.text.Editable;
+import android.text.InputFilter;
 import android.text.Selection;
+import android.text.Spanned;
 import android.text.Spannable;
 import android.text.SpannableStringBuilder;
 import android.text.TextWatcher;
@@ -72,6 +75,7 @@ import android.text.style.TypefaceSpan;
 import android.text.util.Linkify;
 import android.text.util.Linkify.MatchFilter;
 import android.text.util.Linkify.TransformFilter;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -91,6 +95,7 @@ public class EditNote extends ActionBarActivity {
 	private EditText title;
 	private EditText content;
 	private LinearLayout formatBar;
+	private TextView actionBarTitleView;
 	
 	// Model objects
 	private Note note;
@@ -135,7 +140,20 @@ public class EditNote extends ActionBarActivity {
 		
 		content = (EditText) findViewById(R.id.content);
 		title = (EditText) findViewById(R.id.title);
-		
+		setupMultilineActionBarTitle();
+
+		// title's inputType includes textMultiLine so long titles wrap across lines instead
+		// of being truncated, but a title should still never contain an actual line break
+		title.setFilters(new InputFilter[] { new InputFilter() {
+			public CharSequence filter(CharSequence source, int start, int end, Spanned dest, int dstart, int dend) {
+				for (int i = start; i < end; i++) {
+					if (source.charAt(i) == '\n')
+						return "";
+				}
+				return null;
+			}
+		} });
+
 		formatBar = (LinearLayout) findViewById(R.id.formatBar);
 
 		content.setOnFocusChangeListener(new OnFocusChangeListener() {
@@ -261,6 +279,28 @@ public class EditNote extends ActionBarActivity {
 
 		content.setBackgroundColor(getColor(R.color.note_background));
 		content.setTextColor(getColor(R.color.note_text));
+	}
+
+	// the framework ActionBar's built-in title TextView is hardcoded singleLine and can't wrap,
+	// so on narrow portrait phones "Tomdroid - Edit Note" gets truncated once the action icons
+	// crowd it; a custom title view (paired with LightTheme.TallActionBar) lets it wrap instead
+	private void setupMultilineActionBarTitle() {
+		ActionBar actionBar = getActionBar();
+		if (actionBar == null)
+			return;
+		actionBarTitleView = (TextView) LayoutInflater.from(this).inflate(R.layout.actionbar_title, null);
+		actionBarTitleView.setText(getTitle());
+		actionBar.setDisplayShowTitleEnabled(false);
+		actionBar.setDisplayShowCustomEnabled(true);
+		actionBar.setCustomView(actionBarTitleView,
+				new ActionBar.LayoutParams(ActionBar.LayoutParams.MATCH_PARENT, ActionBar.LayoutParams.MATCH_PARENT));
+	}
+
+	@Override
+	protected void onTitleChanged(CharSequence title, int color) {
+		super.onTitleChanged(title, color);
+		if (actionBarTitleView != null)
+			actionBarTitleView.setText(title);
 	}
 
 	@Override

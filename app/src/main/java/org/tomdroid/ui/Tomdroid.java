@@ -149,10 +149,16 @@ public class Tomdroid extends ActionBarListActivity {
     }
 
 	private View main;
-	
+
 	// UI to data model glue
 	private TextView			listEmptyView;
 	private ListAdapter			adapter;
+
+	// phone-mode list scroll position, saved/restored across the onPause/onResume that
+	// happens when viewing or editing a note (a new Activity), since onResume always
+	// rebuilds the adapter/cursor from scratch which otherwise resets scroll to top
+	private int savedListIndex = 0;
+	private int savedListTop = 0;
 
 	// UI feedback handler
 	private Handler	 syncMessageHandler	= new SyncMessageHandler(this);
@@ -260,6 +266,7 @@ public class Tomdroid extends ActionBarListActivity {
 		// add note to pane for tablet
 		rightPane = (LinearLayout) findViewById(R.id.right_pane);
 		registerForContextMenu(findViewById(android.R.id.list));
+		setupListJumpButtons();
 
 		// check if receiving note
 		if(getIntent().hasExtra("view_note")) {
@@ -470,6 +477,16 @@ public class Tomdroid extends ActionBarListActivity {
     	super.onDestroy();
     }
 
+    @Override
+    protected void onPause() {
+    	if (rightPane == null && getListView() != null) {
+    		savedListIndex = getListView().getFirstVisiblePosition();
+    		View v = getListView().getChildAt(0);
+    		savedListTop = (v == null) ? 0 : v.getTop();
+    	}
+    	super.onPause();
+    }
+
 	public void onResume() {
 		
 		// if the SyncService was stopped because Android killed it, we should not show the progress dialog any more
@@ -516,9 +533,11 @@ public class Tomdroid extends ActionBarListActivity {
 			if(!creating)
 				showNoteInPane(lastIndex);
 		}
-		else 
+		else {
 			updateNotesList(query, lastIndex);
-		
+			getListView().setSelectionFromTop(savedListIndex, savedListTop);
+		}
+
 		// set the view shown when the list is empty
 		updateEmptyList(query);
 		creating = false;
@@ -822,10 +841,11 @@ public class Tomdroid extends ActionBarListActivity {
         }
 		
 		registerForContextMenu(findViewById(android.R.id.list));
+		setupListJumpButtons();
 
 		// add note to pane for tablet
 		rightPane = (LinearLayout) findViewById(R.id.right_pane);
-		
+
 		if(rightPane != null) {
 			content = (TextView) findViewById(R.id.content);
 			title = (TextView) findViewById(R.id.title);
@@ -834,9 +854,28 @@ public class Tomdroid extends ActionBarListActivity {
 		}
 		else
 			updateNotesList(query,-1);
-		
+
 		// set the view shown when the list is empty
 		updateEmptyList(query);
+	}
+
+	private void setupListJumpButtons() {
+		View topButton = findViewById(R.id.btn_list_top);
+		View bottomButton = findViewById(R.id.btn_list_bottom);
+
+		topButton.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				getListView().setSelection(0);
+			}
+		});
+
+		bottomButton.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				int count = getListView().getCount();
+				if (count > 0)
+					getListView().setSelection(count - 1);
+			}
+		});
 	}
 
 	private void updateNotesList(String aquery, int aposition) {

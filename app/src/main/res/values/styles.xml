@@ -54,4 +54,10 @@
 
     <style name="ActionBarCompatHomeItem" parent="@style/ActionBarCompatItemBase">
     </style>
+
+    <!-- ViewNote/EditNote: taller action bar so their custom two-line title (see
+         layout/actionbar_title.xml) has room to wrap without being clipped. -->
+    <style name="LightTheme.TallActionBar">
+        <item name="android:actionBarSize">72dp</item>
+    </style>
 </resources>

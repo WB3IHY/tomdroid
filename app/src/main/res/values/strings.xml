@@ -158,7 +158,13 @@
 	<string name="NewNoteTitle">New Note</string>
 	<string name="NewNoteTitleHint">Enter title here</string>
 	<string name="NewNoteBodyHint">Enter note here</string>
-			
+
+	<!-- note list jump buttons -->
+	<string name="btnJumpToTop">▲</string>
+	<string name="btnJumpToBottom">▼</string>
+	<string name="descJumpToTop">Jump to top of list</string>
+	<string name="descJumpToBottom">Jump to bottom of list</string>
+
 	<!-- editNote -->
 	<string name="edit">Edit</string>
 	<string name="save">Save</string>

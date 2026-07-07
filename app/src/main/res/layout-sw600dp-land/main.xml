@@ -26,12 +26,47 @@
   android:layout_width="match_parent"
   android:layout_height="match_parent"
   android:id="@+id/main">
-	<!-- background/divider are set in Java (Tomdroid.updateListPaneBackground()) rather
-	     than here, since XML-inflated GradientDrawable resources didn't reliably pick up
-	     the values-night color variant on some devices. -->
-	<ListView android:id="@android:id/list"
-    	android:layout_width="@dimen/left_width"
-		android:layout_height="fill_parent"
-		/>
+	<FrameLayout
+		android:layout_width="@dimen/left_width"
+		android:layout_height="fill_parent">
+
+		<!-- background/divider are set in Java (Tomdroid.updateListPaneBackground()) rather
+		     than here, since XML-inflated GradientDrawable resources didn't reliably pick up
+		     the values-night color variant on some devices. -->
+		<ListView android:id="@android:id/list"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			/>
+
+		<LinearLayout
+			android:id="@+id/list_jump_buttons"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="bottom|right"
+			android:layout_margin="12dp"
+			android:orientation="vertical">
+
+			<Button android:id="@+id/btn_list_top"
+				android:layout_width="44dp"
+				android:layout_height="44dp"
+				android:layout_marginBottom="6dp"
+				android:background="@drawable/button"
+				android:text="@string/btnJumpToTop"
+				android:textStyle="bold"
+				android:textColor="#464646"
+				android:contentDescription="@string/descJumpToTop" />
+
+			<Button android:id="@+id/btn_list_bottom"
+				android:layout_width="44dp"
+				android:layout_height="44dp"
+				android:background="@drawable/button"
+				android:text="@string/btnJumpToBottom"
+				android:textStyle="bold"
+				android:textColor="#464646"
+				android:contentDescription="@string/descJumpToBottom" />
+
+		</LinearLayout>
+
+	</FrameLayout>
 	<include android:id="@+id/right_pane" layout="@layout/note_view" />
 </LinearLayout>

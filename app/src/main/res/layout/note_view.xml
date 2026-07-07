@@ -41,12 +41,11 @@
 			android:id="@+id/view_parent"
 			android:orientation="vertical"
 			>
-			<TextView 
+			<TextView
 			  android:id="@+id/title"
-			  android:layout_width="match_parent" 
+			  android:layout_width="match_parent"
 			  android:layout_height="wrap_content"
 			  android:padding="10dip"
-			  android:singleLine="true"
 			  android:text=""
 			  android:textColor="#ffb8bcb8"
 			  />

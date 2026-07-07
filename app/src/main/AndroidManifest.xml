@@ -48,7 +48,7 @@
         </activity>
     
 		<activity android:name=".ui.ViewNote"
-			android:theme="@style/LightTheme"
+			android:theme="@style/LightTheme.TallActionBar"
 			android:label="@string/view_title"
 			>
 			<intent-filter>
@@ -60,7 +60,7 @@
 		</activity>
 		<activity android:name=".ui.EditNote"
 			android:configChanges="keyboardHidden|orientation|screenSize"
-			android:theme="@style/LightTheme"
+			android:theme="@style/LightTheme.TallActionBar"
 			android:label="@string/edit_title"
 		    >
 		</activity>

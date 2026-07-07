@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Custom action bar title view for ViewNote/EditNote: the framework ActionBar's built-in
+     title TextView is hardcoded singleLine in the platform layout and can't be made to wrap,
+     so screens whose label needs more than one line (e.g. "Tomdroid - View Note" squeezed by
+     action icons on a narrow portrait phone) use this instead. -->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/actionbar_title"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:ellipsize="none"
+    android:maxLines="2"
+    android:textSize="18sp"
+    android:textColor="?android:attr/textColorPrimary" />

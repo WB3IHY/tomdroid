@@ -1,3 +1,122 @@
+2026-07-07  Joe WB3IHY  <wb3ihy@gmail.com>
+
+	* app/src/main/AndroidManifest.xml:
+	* app/src/main/res/layout/actionbar_title.xml:
+	* app/src/main/res/values/styles.xml:
+	* app/src/main/java/org/tomdroid/ui/ViewNote.java:
+	* app/src/main/java/org/tomdroid/ui/EditNote.java:
+	Give ViewNote/EditNote a custom, wrappable action bar title (paired
+	with a taller LightTheme.TallActionBar) since the framework
+	ActionBar's built-in title TextView is hardcoded singleLine and was
+	truncating "Tomdroid - View Note"/"Tomdroid - Edit Note" on narrow
+	portrait phones once the action icons crowded it.
+
+	* app/src/main/res/layout/note_view.xml:
+	* app/src/main/res/layout/note_edit.xml:
+	Let the in-note title wrap across multiple lines instead of being
+	forced to a single truncated line; EditNote's title EditText gets
+	an InputFilter so pressing Enter can't insert an actual line break.
+
+	* app/src/main/java/org/tomdroid/ui/Tomdroid.java:
+	* app/src/main/res/layout/main.xml:
+	* app/src/main/res/layout-sw600dp-land/main.xml:
+	* app/src/main/res/values/strings.xml:
+	Save/restore the note list's scroll position across the
+	onPause/onResume that happens when viewing or editing a note, so
+	returning to the list no longer resets to the top. Add floating
+	jump-to-top/jump-to-bottom buttons overlaid on the list.
+
+	* app/build.gradle:
+	Bump versionCode/versionName for this fix.
+
+2026-07-02  Joe WB3IHY  <wb3ihy@gmail.com>
+
+	* app/src/main/java/org/tomdroid/ui/Tomdroid.java:
+	* app/src/main/res/layout-sw600dp-land/main.xml:
+	* app/src/main/res/drawable/drop_shadow.xml (removed):
+	* app/src/main/res/drawable/drop_shadow_separator.xml (removed):
+	Fix the tablet two-pane list's dark-mode background: the previous
+	values-night color-resource fix compiled correctly but a Samsung
+	One UI Android 13 tablet still showed a light background with
+	barely-readable light text, because the ListView's
+	android:background/android:divider XML-inflated GradientDrawables
+	didn't reliably pick up the values-night variant on that device,
+	unlike every other color in the app (resolved via getColor() in
+	Java). Build the same gradients programmatically in
+	Tomdroid.updateListPaneBackground() instead, and delete the
+	now-dead XML drawables. Also sets
+	android:forceDarkAllowed="false" since the app fully manages its
+	own day/night resources already.
+
+2026-07-02  Joe WB3IHY  <wb3ihy@gmail.com>
+
+	* data/firstnote/*:
+	* README.md:
+	* app/src/main/res/values-*/strings.xml:
+	Rewrite the bundled "Tomdroid's First Note" (it pointed at dead
+	public sync servers and an upstream Launchpad contributor pitch
+	that doesn't apply to this fork) to describe Online Sync against a
+	self-hosted Tomboy Web REST server (e.g. grauphel) and SD Card
+	sync; drop the now-stale per-locale overrides of
+	firstNoteTitle/firstNoteContent across 54 translated strings.xml
+	files. Rewrite README to match the fork's actual build toolchain,
+	feature/security changes, and GitHub Release install flow.
+
+2026-07-02  Joe WB3IHY  <wb3ihy@gmail.com>
+
+	* app/src/main/res/values/colors.xml:
+	* app/src/main/res/values-night/colors.xml:
+	* app/src/main/res/layout-sw600dp-land/main.xml:
+	Fix the tablet two-pane list's drop_shadow/drop_shadow_separator
+	background/divider drawables, hardcoded light-gray with no night
+	variant, making dark-mode row text nearly invisible against them
+	in landscape on tablets. Move the gradient colors into colors.xml
+	/ values-night/colors.xml, matching the existing note_background
+	pattern.
+
+2026-07-01  Joe WB3IHY  <wb3ihy@gmail.com>
+
+	Migrate this decade-old, abandoned Tomboy-on-Android fork to a
+	current Android Studio/Gradle toolchain and bring it up to modern
+	Android and security standards for personal daily-driver sideload
+	use, while preserving compatibility with existing Tomboy/grauphel
+	sync data.
+
+	Build system: restructure into standard Gradle module layout
+	(app/src/main/...); AGP 8.5.2 / Gradle 8.7, compileSdk 34, minSdk
+	24, targetSdk 29 (kept at 29 to preserve
+	requestLegacyExternalStorage for the SD-card sync path); release
+	signing wired up via environment variables only, nothing secret or
+	machine-specific committed; reset versioning to 1.0.0 for this
+	fork's own release lineage.
+
+	Features: notebook support (NotebookManager), using the same
+	system:notebook:<name> tag convention as Tomboy desktop's
+	Notebooks add-in; replaced the legacy floating system Search
+	Dialog (unscrollable suggestions dropdown on modern Android) with
+	a proper SearchView action-view; day/night theme support following
+	the system setting; replaced the deprecated, non-functional
+	SlidingDrawer formatting toolbar with a plain layout.
+
+	Security fixes: removed a trust-all TLS TrustManager that accepted
+	any certificate and disabled hostname verification; fixed SQL
+	injection in NoteProvider's query/delete/update via parameterized
+	selectionArgs; stopped logging OAuth secrets and full note
+	content; added android:allowBackup="false" and GUID validation
+	before use in filesystem paths (SD-card sync).
+
+	Bug fixes: fixed several resource leaks (HTTP connection managers,
+	a Cursor leak in sync logic) and re-exposed null-cursor NPE risks;
+	fixed a stale-content race when assigning a notebook to an unsaved
+	note; fixed an unescaped/unanchored SQL LIKE in notebook filtering;
+	fixed a crash on tablet-landscape devices where the alternate menu
+	resources weren't updated to match the SearchView/notebooks
+	changes; regenerated launcher icons for xxhdpi/xxxhdpi and fixed
+	inconsistent icon density scaling.
+
+	Cleanup: removed unreachable pre-Honeycomb ActionBar compat code,
+	now that minSdk is 24; removed dead/unreferenced resources.
+
 2014-01-04  Stefan Hammer  <j.4@gmx.at>
 
 	* src/org/tomdroid/util/Time.java:

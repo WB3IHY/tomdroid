@@ -24,6 +24,7 @@
  */
 package org.tomdroid.ui;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -39,6 +40,7 @@ import android.text.SpannableStringBuilder;
 import android.text.util.Linkify;
 import android.text.util.Linkify.MatchFilter;
 import android.text.util.Linkify.TransformFilter;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -68,6 +70,7 @@ public class ViewNote extends ActionBarActivity {
     // UI elements
 	private TextView content;
 	private TextView title;
+	private TextView actionBarTitleView;
 
 	// Model objects
 	private Note note;
@@ -86,14 +89,37 @@ public class ViewNote extends ActionBarActivity {
 		super.onCreate(savedInstanceState);
 		Preferences.init(this, Tomdroid.CLEAR_PREFERENCES);
 		setContentView(R.layout.note_view);
-		
+
 		content = (TextView) findViewById(R.id.content);
 		title = (TextView) findViewById(R.id.title);
+		setupMultilineActionBarTitle();
 
 		// this we will call on resume as well.
 		updateTextAttributes();
         uri = getIntent().getData();
     }
+
+	// the framework ActionBar's built-in title TextView is hardcoded singleLine and can't wrap,
+	// so on narrow portrait phones "Tomdroid - View Note" gets truncated once the action icons
+	// crowd it; a custom title view (paired with LightTheme.TallActionBar) lets it wrap instead
+	private void setupMultilineActionBarTitle() {
+		ActionBar actionBar = getActionBar();
+		if (actionBar == null)
+			return;
+		actionBarTitleView = (TextView) LayoutInflater.from(this).inflate(R.layout.actionbar_title, null);
+		actionBarTitleView.setText(getTitle());
+		actionBar.setDisplayShowTitleEnabled(false);
+		actionBar.setDisplayShowCustomEnabled(true);
+		actionBar.setCustomView(actionBarTitleView,
+				new ActionBar.LayoutParams(ActionBar.LayoutParams.MATCH_PARENT, ActionBar.LayoutParams.MATCH_PARENT));
+	}
+
+	@Override
+	protected void onTitleChanged(CharSequence title, int color) {
+		super.onTitleChanged(title, color);
+		if (actionBarTitleView != null)
+			actionBarTitleView.setText(title);
+	}
 
 	private void handleNoteUri(final Uri uri) {// We were triggered by an Intent URI
         TLog.d(TAG, "ViewNote started: Intent-filter triggered.");
